@@ -124,6 +124,9 @@ with tab2:
     up = st.file_uploader("CSV file", type="csv")
     if up is not None:
         df = pd.read_csv(up)
+        match = [c for c in df.columns if "smiles" in str(c).lower()]
+        if match:
+            df = df.rename(columns={match[0]: "smiles"})
         if "smiles" not in df.columns:
             st.error("The CSV needs a column named 'smiles'.")
         else:
