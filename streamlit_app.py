@@ -8,13 +8,44 @@ gen = rdFingerprintGenerator.GetMorganGenerator(radius=2, fpSize=2048)
 
 st.markdown("""
 <style>
-.hero {background: linear-gradient(90deg,#6C4DF6,#9B7BFF); padding: 1.4rem 1.8rem;
-       border-radius: 14px; color: white; margin-bottom: 1rem;}
-.hero h1 {color: white; margin: 0; font-size: 2rem;}
-.hero p {margin: .3rem 0 0 0; opacity: .92;}
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&display=swap');
+
+h1, h2, h3 {font-family: 'Source Serif 4', Georgia, serif !important; color: #1F2328;}
+
+.hero {
+    background: linear-gradient(120deg, #1F2328 0%, #2B3138 60%, #3A424B 100%);
+    padding: 1.8rem 2.2rem; border-radius: 12px; margin-bottom: 1.2rem;
+    border-left: 6px solid #F59E0B;
+}
+.hero .tag {color: #FCD34D; font-size: .78rem; letter-spacing: .14em; font-weight: 600;}
+.hero h1 {color: #FFFFFF !important; margin: .2rem 0 .3rem 0; font-size: 2.1rem;}
+.hero p {color: #D5D9DE; margin: 0; font-size: 1rem;}
+.hero .meta {color: #98A1AC; font-size: .85rem; margin-top: .7rem;}
+
+[data-testid="stMetric"] {
+    background: #FFFFFF; border: 1px solid #E2E2DF; border-radius: 10px;
+    padding: .8rem 1rem; box-shadow: 0 1px 3px rgba(31,35,40,.07);
+}
+[data-testid="stMetricLabel"] {color: #6B7280;}
+[data-testid="stMetricValue"] {color: #1F2328;}
+
+.stButton > button {
+    border: 1px solid #B45309; color: #B45309; background: #FFFFFF; border-radius: 8px;
+}
+.stButton > button:hover {background: #B45309; color: #FFFFFF; border-color: #B45309;}
+
+.stTabs [data-baseweb="tab"] {font-weight: 600; color: #6B7280;}
+.stTabs [aria-selected="true"] {color: #B45309;}
+
+.block-container {padding-top: 2rem; max-width: 1150px;}
 </style>
-<div class="hero"><h1>🧠 NeuroAChE Screen</h1>
-<p>Prioritizing brain-penetrant acetylcholinesterase inhibitors with machine learning</p></div>
+
+<div class="hero">
+  <div class="tag">CHEMINFORMATICS · NEUROPHARMACOLOGY</div>
+  <h1>AChE Inhibitor Predictor</h1>
+  <p>Machine learning-based prioritization of brain-penetrant acetylcholinesterase inhibitors</p>
+  <div class="meta">Random forest · Morgan fingerprints · ChEMBL training data · ROC-AUC 0.873 on unseen scaffolds</div>
+</div>
 """, unsafe_allow_html=True)
 
 def to_arr(fp):
