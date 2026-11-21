@@ -3,7 +3,7 @@ from rdkit import Chem, DataStructs
 from rdkit.Chem import Descriptors, Crippen, rdMolDescriptors, QED, Draw, rdFingerprintGenerator
 from sklearn.ensemble import RandomForestClassifier
 
-st.set_page_config(page_title="AChE inhibitor predictor", page_icon="🧠", layout="wide")
+st.set_page_config(page_title="NeuroAChE Screen", page_icon="🧠", layout="wide")
 gen = rdFingerprintGenerator.GetMorganGenerator(radius=2, fpSize=2048)
 
 st.markdown("""
@@ -13,7 +13,7 @@ st.markdown("""
 .hero h1 {color: white; margin: 0; font-size: 2rem;}
 .hero p {margin: .3rem 0 0 0; opacity: .92;}
 </style>
-<div class="hero"><h1>🧠 AChE inhibitor predictor</h1>
+<div class="hero"><h1>🧠 NeuroAChE Screen</h1>
 <p>Prioritizing brain-penetrant acetylcholinesterase inhibitors with machine learning</p></div>
 """, unsafe_allow_html=True)
 
