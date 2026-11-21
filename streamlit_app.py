@@ -154,9 +154,11 @@ with tab1:
 
         st.subheader("Most similar molecules the model learned from")
         nbrs = [Chem.MolFromSmiles(train["smiles"].iloc[i]) for i in top]
-        legends = [f"{'Active' if train['label'].iloc[i] == 1 else 'Inactive'}  |  similarity {sims[i]:.2f}"
-                   for i in top]
-        st.image(Draw.MolsToGridImage(nbrs, molsPerRow=3, subImgSize=(260, 200), legends=legends))
+               def tag(i):
+            nm = "" if "name" not in train.columns or pd.isna(train["name"].iloc[i]) else str(train["name"].iloc[i])[:22]
+            return f"{nm} | {'Active' if train['label'].iloc[i] == 1 else 'Inactive'} | {sims[i]:.2f}"
+        legends = [tag(i) for i in top]
+        st.image(Draw.MolsToGridImage(nbrs, molsPerRow=3, subImgSize=(340, 220), legends=legends))
         st.caption(f"This is a computer prediction, not a lab result. On unseen scaffolds the model's "
                    f"ROC-AUC was {SCAF_AUC}, so expect errors.")
 
