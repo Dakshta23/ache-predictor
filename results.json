@@ -1,0 +1,108 @@
+{
+  "random": {
+    "n_train": 3536,
+    "n_test": 884,
+    "roc_auc": 0.963,
+    "pr_auc": 0.976,
+    "accuracy": 0.91,
+    "precision": 0.924,
+    "recall": 0.934,
+    "f1": 0.929,
+    "mcc": 0.804
+  },
+  "scaffold": {
+    "n_train": 3536,
+    "n_test": 884,
+    "roc_auc": 0.879,
+    "pr_auc": 0.937,
+    "accuracy": 0.8,
+    "precision": 0.854,
+    "recall": 0.844,
+    "f1": 0.849,
+    "mcc": 0.552
+  },
+  "features": [
+    {
+      "rank": 1,
+      "bit": 667,
+      "importance": 0.0106,
+      "n_molecules": 1167,
+      "pct_active": 88.4,
+      "enriched_in": "actives"
+    },
+    {
+      "rank": 2,
+      "bit": 712,
+      "importance": 0.0097,
+      "n_molecules": 795,
+      "pct_active": 94.7,
+      "enriched_in": "actives"
+    },
+    {
+      "rank": 3,
+      "bit": 800,
+      "importance": 0.0085,
+      "n_molecules": 486,
+      "pct_active": 88.5,
+      "enriched_in": "actives"
+    },
+    {
+      "rank": 4,
+      "bit": 1048,
+      "importance": 0.008,
+      "n_molecules": 642,
+      "pct_active": 97.5,
+      "enriched_in": "actives"
+    },
+    {
+      "rank": 5,
+      "bit": 1097,
+      "importance": 0.0078,
+      "n_molecules": 933,
+      "pct_active": 89.9,
+      "enriched_in": "actives"
+    },
+    {
+      "rank": 6,
+      "bit": 1143,
+      "importance": 0.0074,
+      "n_molecules": 881,
+      "pct_active": 84.1,
+      "enriched_in": "actives"
+    },
+    {
+      "rank": 7,
+      "bit": 1564,
+      "importance": 0.0072,
+      "n_molecules": 540,
+      "pct_active": 86.9,
+      "enriched_in": "actives"
+    },
+    {
+      "rank": 8,
+      "bit": 592,
+      "importance": 0.007,
+      "n_molecules": 717,
+      "pct_active": 92.9,
+      "enriched_in": "actives"
+    },
+    {
+      "rank": 9,
+      "bit": 1948,
+      "importance": 0.007,
+      "n_molecules": 901,
+      "pct_active": 90.6,
+      "enriched_in": "actives"
+    },
+    {
+      "rank": 10,
+      "bit": 832,
+      "importance": 0.0069,
+      "n_molecules": 390,
+      "pct_active": 91.8,
+      "enriched_in": "actives"
+    }
+  ],
+  "n_molecules": 4420,
+  "active_rate": 63.5
+}
