@@ -330,3 +330,7 @@ with tab5:
     st.write("**Reliability:** if similarity to the training set is below 0.4, the prediction is flagged as unreliable.")
     st.info("Limits: activity is predicted from structure alone. The app does not model docking, toxicity or real "
             "blood-brain barrier transport. Treat results as a way to rank molecules, not as proof.")
+    
+    import hashlib, sklearn, rdkit
+    st.caption(f"Debug: scikit-learn {sklearn.__version__} · RDKit {rdkit.__version__} · rows {len(train)} · "
+               f"actives {int(train['label'].sum())} · data hash {hashlib.md5(''.join(train['smiles']).encode()).hexdigest()[:8]}")
